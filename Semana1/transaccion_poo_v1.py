@@ -1,7 +1,9 @@
 # -------------------------------------------------------------
-# ACTIVIDAD 2-1: PROGRAMACION ORIENTADA A OBJETOS
+# ACTIVIDAD 2-1: PROGRAMACIÓN ORIENTADA A OBJETOS
 # Quantum Core
 # -------------------------------------------------------------
+
+import os
 
 
 # -------------------------------------------------------------
@@ -11,15 +13,14 @@
 class Transaccion:
 
     # Constructor de la clase
-    # Recibe los datos de una transacción
     def __init__(self, cliente_id, tipo, monto):
 
-        # Guardamos los datos como atributos del objeto
+        # Atributos del objeto
         self.cliente_id = cliente_id
         self.tipo = tipo
         self.monto = monto
 
-    # Método para obtener la información de una transacción
+    # Método para obtener la información de la transacción
     def obtener_informacion(self):
 
         return (
@@ -30,36 +31,34 @@ class Transaccion:
 
 
 # -------------------------------------------------------------
-# FUNCIÓN PARA LEER Y CREAR OBJETOS TRANSACCION
+# FUNCIÓN PARA LEER Y ALMACENAR LOS DATOS
 # -------------------------------------------------------------
 
 def leer_y_almacenar_datos(nombre_archivo):
 
-    # Creamos una lista vacía para almacenar
-    # los objetos Transaccion
+    # Lista que almacenará los objetos Transaccion
     lista_transacciones = []
 
     # Abrimos el archivo en modo lectura
     with open(nombre_archivo, "r") as archivo:
 
-        # Recorremos el archivo línea por línea
+        # Recorremos cada línea del archivo
         for linea in archivo:
 
-            # Quitamos espacios y dividimos la línea
-            # usando la coma como separador
+            # Quitamos espacios y dividimos la línea por comas
             partes = linea.strip().split(",")
 
-            # Verificamos que existan tres datos
+            # Verificamos que la línea tenga tres datos
             if len(partes) == 3:
 
-                # Creamos un objeto de la clase Transaccion
+                # Creamos un objeto Transaccion
                 transaccion = Transaccion(
                     partes[0].strip(),
                     partes[1].strip(),
                     int(partes[2].strip())
                 )
 
-                # Guardamos el objeto dentro de la lista
+                # Agregamos el objeto a la lista
                 lista_transacciones.append(transaccion)
 
     # Retornamos la lista de objetos
@@ -72,16 +71,16 @@ def leer_y_almacenar_datos(nombre_archivo):
 
 def calcular_monto_total(lista_transacciones):
 
-    # Comenzamos el total en cero
+    # Iniciamos el total en cero
     total_monto = 0
 
     # Recorremos la lista de objetos
     for transaccion in lista_transacciones:
 
-        # Sumamos el atributo monto de cada objeto
+        # Sumamos el monto de cada objeto
         total_monto = total_monto + transaccion.monto
 
-    # Retornamos el total
+    # Retornamos el resultado
     return total_monto
 
 
@@ -91,17 +90,16 @@ def calcular_monto_total(lista_transacciones):
 
 def filtrar_por_tipo(lista_transacciones, tipo_a_filtrar):
 
-    # Creamos una nueva lista para guardar
-    # los objetos que coincidan
+    # Creamos una lista para las transacciones filtradas
     lista_filtrada = []
 
     # Recorremos todos los objetos
     for transaccion in lista_transacciones:
 
-        # Comprobamos el tipo de cada objeto
+        # Comprobamos si el tipo coincide
         if transaccion.tipo == tipo_a_filtrar:
 
-            # Agregamos el objeto a la nueva lista
+            # Agregamos el objeto a la lista filtrada
             lista_filtrada.append(transaccion)
 
     # Retornamos la lista filtrada
@@ -109,7 +107,7 @@ def filtrar_por_tipo(lista_transacciones, tipo_a_filtrar):
 
 
 # -------------------------------------------------------------
-# FUNCIÓN PRINCIPAL
+# FUNCIÓN PRINCIPAL DE EJECUCIÓN
 # -------------------------------------------------------------
 
 def ejecutar_sistema():
@@ -117,19 +115,19 @@ def ejecutar_sistema():
     # Obtenemos la carpeta donde está este archivo
     carpeta_actual = os.path.dirname(__file__)
 
-    # Ubicamos el archivo de transacciones
+    # Creamos la ruta completa del archivo de transacciones
     nombre_archivo = os.path.join(
         carpeta_actual,
         "transacciones.txt"
     )
 
-    # Leemos el archivo y creamos una lista de objetos
+    # Leemos el archivo y creamos los objetos
     lista_transacciones = leer_y_almacenar_datos(nombre_archivo)
 
     # Calculamos el monto total
     total = calcular_monto_total(lista_transacciones)
 
-    # Mostramos el total
+    # Mostramos el monto total
     print("Monto total:", total)
 
     # Filtramos las transacciones de tipo CREDITO
@@ -139,17 +137,12 @@ def ejecutar_sistema():
     )
 
     # Mostramos las transacciones filtradas
-    print("\nTransacciones de tipo CREDITO:")
+    print()
+    print("Transacciones de tipo CREDITO:")
 
+    # Mostramos cada objeto de la lista filtrada
     for transaccion in transacciones_credito:
         print(transaccion.obtener_informacion())
-
-
-# -------------------------------------------------------------
-# IMPORTAMOS OS PARA TRABAJAR CON LA RUTA DEL ARCHIVO
-# -------------------------------------------------------------
-
-import os
 
 
 # -------------------------------------------------------------
