@@ -1,0 +1,37 @@
+# Actividad 1 - Semana 3
+## Robustez con Encapsulamiento, Herencia y Polimorfismo
+
+### Quantum Core
+
+## 1. Introducción
+
+En esta actividad se tomó como base el programa de transacciones desarrollado en la Semana 2 y se realizó una mejora utilizando conceptos de Programación Orientada a Objetos (POO).
+
+El objetivo fue convertir la clase `Transaccion` en una estructura más segura, reutilizable y fácil de ampliar mediante los conceptos de encapsulamiento, herencia y polimorfismo.
+
+El programa trabaja con información de transacciones financieras almacenadas en el archivo `transacciones.txt`.
+
+---
+
+# 2. Archivos del proyecto
+
+El proyecto está compuesto por:
+
+- `diseno_pilares_poo.py`: contiene las clases y funciones del programa.
+- `transacciones.txt`: contiene los datos de las transacciones.
+- `README.md`: contiene la explicación del desarrollo de la actividad.
+
+---
+
+# 3. Encapsulamiento
+
+En la versión anterior del programa, los atributos de la clase `Transaccion` podían ser modificados directamente.
+
+Para mejorar la seguridad de los datos, se aplicó encapsulamiento.
+
+Los atributos ahora utilizan un guion bajo:
+
+```python
+self._cliente_id
+self._tipo
+self._monto
