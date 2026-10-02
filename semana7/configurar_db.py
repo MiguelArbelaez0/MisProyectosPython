@@ -1,15 +1,32 @@
 import sqlite3
+import os
 
-# 1. Conectar con la base de datos
-conexion = sqlite3.connect("quantum_wallet.db")
 
-# 2. Crear el cursor
+# ============================================================
+# 1. UBICACIÓN DE LA BASE DE DATOS
+# ============================================================
+
+ruta_db = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    "quantum_wallet.db"
+)
+
+
+# ============================================================
+# 2. CONEXIÓN CON SQLITE
+# ============================================================
+
+conexion = sqlite3.connect(ruta_db)
 cursor = conexion.cursor()
 
-# 3. Activar las llaves foráneas
+# Activar llaves foráneas
 cursor.execute("PRAGMA foreign_keys = ON")
 
-# 4. Crear la tabla usuarios
+
+# ============================================================
+# 3. CREAR TABLA USUARIOS
+# ============================================================
+
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS usuarios (
     id_usuario INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -19,7 +36,11 @@ CREATE TABLE IF NOT EXISTS usuarios (
 )
 """)
 
-# 5. Crear la tabla wallets
+
+# ============================================================
+# 4. CREAR TABLA WALLETS
+# ============================================================
+
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS wallets (
     id_wallet INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -30,63 +51,148 @@ CREATE TABLE IF NOT EXISTS wallets (
 )
 """)
 
-# 6. Insertar un usuario de prueba
-try:
+
+# ============================================================
+# 5. DATOS DE PRUEBA
+# ============================================================
+
+usuarios_prueba = [
+    (
+        "MIGUEL ARBELAEZ VALLEJO",
+        "miguel.arbelaez@example.com",
+        "900000001-1",
+        150000.50
+    ),
+    (
+        "JOHANNES ANDRES BARRIOS RAVELES",
+        "johannes.barrios@example.com",
+        "900000002-2",
+        250000.00
+    ),
+    (
+        "JAVIER ANDRES BERROCAL ALVAREZ",
+        "javier.berrocal@example.com",
+        "900000003-3",
+        480000.50
+    ),
+    (
+        "JACOB MANUEL CAMACHO ACOSTA",
+        "jacob.camacho@example.com",
+        "900000004-4",
+        125000.75
+    ),
+    (
+        "DEIBIS ZULUAGA BAENA",
+        "deibis.zuluaga@example.com",
+        "900000005-5",
+        750000.00
+    ),
+    (
+        "DANIEL NAVARRO BELLO",
+        "daniel.navarro@example.com",
+        "900000006-6",
+        320000.25
+    ),
+    (
+        "JHON ALONSO PENARANDA REYES",
+        "jhon.penaranda@example.com",
+        "900000007-7",
+        915000.00
+    ),
+    (
+        "MARIA CRISTINA PINO LOPERA",
+        "maria.pino@example.com",
+        "900000008-8",
+        180000.50
+    ),
+    (
+        "JUANA IRIS RIOS MORELOS",
+        "juana.rios@example.com",
+        "900000009-9",
+        560000.00
+    ),
+    (
+        "ALEXANDER SILGADO BERRIO",
+        "alexander.silgado@example.com",
+        "900000010-0",
+        430000.75
+    )
+]
+
+
+# ============================================================
+# 6. INSERTAR LOS 10 USUARIOS Y SUS WALLETS
+# ============================================================
+
+for nombre, email, nit, saldo in usuarios_prueba:
+
     cursor.execute("""
     INSERT INTO usuarios (nombre, email, nit)
     VALUES (?, ?, ?)
     """, (
-        "Juan Perez",
-        "juan@mail.com",
-        "900123456-1"
+        nombre,
+        email,
+        nit
     ))
 
-    conexion.commit()
-    print("Usuario insertado correctamente.")
+    id_usuario = cursor.lastrowid
 
-except sqlite3.IntegrityError:
-    print("El usuario ya existe.")
-
-# 7. Obtener el ID del usuario
-cursor.execute("""
-SELECT id_usuario
-FROM usuarios
-WHERE email = ?
-""", ("juan@mail.com",))
-
-usuario = cursor.fetchone()
-
-# 8. Insertar una wallet relacionada con el usuario
-if usuario:
-    id_usuario = usuario[0]
-
-    # Verificar si ya existe una wallet para este usuario
     cursor.execute("""
-    SELECT id_wallet
-    FROM wallets
-    WHERE id_propietario = ?
-    """, (id_usuario,))
+    INSERT INTO wallets (saldo, id_propietario)
+    VALUES (?, ?)
+    """, (
+        saldo,
+        id_usuario
+    ))
 
-    wallet = cursor.fetchone()
 
-    if wallet:
-        print("La wallet ya existe.")
-    else:
-        cursor.execute("""
-        INSERT INTO wallets (saldo, id_propietario)
-        VALUES (?, ?)
-        """, (
-            150000.50,
-            id_usuario
-        ))
+# ============================================================
+# 7. GUARDAR CAMBIOS
+# ============================================================
 
-        conexion.commit()
-        print("Wallet insertada correctamente.")
+conexion.commit()
 
-# 9. Mostrar mensaje de confirmación
-print("Base de datos configurada correctamente.")
 
-# 10. Cerrar la conexión
+# ============================================================
+# 8. VERIFICAR RESULTADOS
+# ============================================================
+
+cursor.execute("SELECT COUNT(*) FROM usuarios")
+total_usuarios = cursor.fetchone()[0]
+
+cursor.execute("SELECT COUNT(*) FROM wallets")
+total_wallets = cursor.fetchone()[0]
+
+cursor.execute("""
+SELECT COUNT(*)
+FROM usuarios u
+LEFT JOIN wallets w
+ON u.id_usuario = w.id_propietario
+WHERE w.id_wallet IS NULL
+""")
+
+usuarios_sin_wallet = cursor.fetchone()[0]
+
+
+# ============================================================
+# 9. MOSTRAR RESULTADO
+# ============================================================
+
+print()
+print("==============================================")
+print("BASE DE DATOS CONFIGURADA CORRECTAMENTE")
+print("==============================================")
+print(f"Ubicación: {ruta_db}")
+print(f"Total de usuarios: {total_usuarios}")
+print(f"Total de wallets: {total_wallets}")
+print(f"Usuarios sin wallet: {usuarios_sin_wallet}")
+print("==============================================")
+
+
+# ============================================================
+# 10. CERRAR CONEXIÓN
+# ============================================================
+
 conexion.close()
 
 print("Conexión cerrada.")
