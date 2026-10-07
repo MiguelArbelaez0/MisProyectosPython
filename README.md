@@ -1,8 +1,8 @@
-# MisProyectosPython
+# Python Projects & Learning Archive
 
-Collection of Python projects developed as part of my learning process in software development and programming.
+A collection of Python exercises and projects developed throughout my software development learning process.
 
-This repository brings together exercises and projects organized by development stages, covering different Python concepts and programming practices.
+This repository groups practical work by development stage, providing a chronological record of programming practice and experimentation with Python.
 
 ## 📂 Repository Structure
 
@@ -15,45 +15,57 @@ MisProyectosPython/
 └── semana7/
 ```
 
-Each directory groups the work corresponding to a different stage of the learning process.
+Each directory represents a different stage of the learning process. The repository is intentionally organized as an archive rather than as a single production application.
 
 ## 🐍 About the Repository
 
-The repository serves as a record of practical Python development work, from foundational programming exercises to more structured projects.
+The projects in this repository document the progression from foundational Python programming to more structured exercises and applications.
 
-The projects are organized chronologically to make the progression of the work easier to follow.
+The work focuses on building programming fundamentals through hands-on implementation, iteration, and problem solving.
+
+Because the repository contains multiple independent stages, the exact technologies and concepts vary between directories.
 
 ## 🎯 What This Repository Demonstrates
 
-Through the different projects and exercises, this repository demonstrates practical work with:
+Across the different stages, the repository demonstrates practical work with:
 
 - Python programming
-- Problem solving
 - Programming fundamentals
+- Problem solving
 - Application logic
 - Data handling
 - Code organization
-- Iterative software development
+- Iterative development
+- Practical experimentation
 
-The specific technologies and concepts vary between the different projects and stages.
+## 📚 Role in My Portfolio
 
-## 📚 Learning Focus
+This repository is primarily a **learning and development archive**, not a flagship production project.
 
-The repository was created as part of my software development learning process, with an emphasis on building practical programming experience through hands-on projects.
+It complements my more specialized portfolio projects in:
 
-It complements my larger projects in Flutter, Python backend development, Full-Stack development, databases, and AI/data applications.
+- Flutter and mobile development
+- Full-Stack development
+- Backend development with Python and .NET
+- SQL and PostgreSQL
+- AI and semantic search
+- Software architecture
+
+The repository is useful for showing the progression of my Python skills and the foundation behind my later backend and AI/data projects.
 
 ## 📌 Project Status
 
-This is an educational and personal repository containing projects developed during different stages of my programming journey.
+**Educational and personal project archive.**
 
-The repository is maintained as a record of practical Python development and learning.
+The repository contains work created during different stages of my programming journey and is maintained as a record of practical Python development.
+
+For production-oriented examples, see the larger projects featured in my GitHub profile.
 
 ## 👨‍💻 Author
 
 **Miguel Arbeláez Vallejo**
 
-Software Developer | Flutter / Dart | Full-Stack Development
+Software Developer | Flutter & Dart | Full-Stack | Backend | AI/Data
 
 - GitHub: https://github.com/MiguelArbelaez0
 - LinkedIn: https://www.linkedin.com/in/miguel-arbelaez-v-57719542b/
