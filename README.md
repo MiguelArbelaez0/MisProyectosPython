@@ -1,10 +1,10 @@
-# Python Projects & Learning Archive
+# Proyectos de Python y archivo de aprendizaje
 
-A collection of Python exercises and projects developed throughout my software development learning process.
+Colección de ejercicios y proyectos desarrollados con Python durante mi proceso de aprendizaje en desarrollo de software.
 
-This repository groups practical work by development stage, providing a chronological record of programming practice and experimentation with Python.
+Este repositorio agrupa trabajos prácticos por etapas de desarrollo y conserva un registro cronológico de práctica y experimentación con Python.
 
-## 📂 Repository Structure
+## 📂 Estructura del repositorio
 
 ```text
 MisProyectosPython/
@@ -15,57 +15,55 @@ MisProyectosPython/
 └── semana7/
 ```
 
-Each directory represents a different stage of the learning process. The repository is intentionally organized as an archive rather than as a single production application.
+Cada directorio representa una etapa diferente del proceso de aprendizaje. El repositorio está organizado como un archivo de aprendizaje y no como una única aplicación de producción.
 
-## 🐍 About the Repository
+## 🐍 Sobre el repositorio
 
-The projects in this repository document the progression from foundational Python programming to more structured exercises and applications.
+Los proyectos documentan la evolución desde fundamentos de programación en Python hasta ejercicios y aplicaciones con una estructura más organizada.
 
-The work focuses on building programming fundamentals through hands-on implementation, iteration, and problem solving.
+El trabajo se centra en fortalecer fundamentos mediante implementación práctica, iteración y resolución de problemas.
 
-Because the repository contains multiple independent stages, the exact technologies and concepts vary between directories.
+Debido a que contiene varias etapas independientes, las tecnologías y conceptos específicos pueden variar entre directorios.
 
-## 🎯 What This Repository Demonstrates
+## 🎯 Qué demuestra
 
-Across the different stages, the repository demonstrates practical work with:
+- Programación con Python.
+- Fundamentos de programación.
+- Resolución de problemas.
+- Lógica de aplicaciones.
+- Manejo de datos.
+- Organización del código.
+- Desarrollo iterativo.
+- Experimentación práctica.
 
-- Python programming
-- Programming fundamentals
-- Problem solving
-- Application logic
-- Data handling
-- Code organization
-- Iterative development
-- Practical experimentation
+## 📚 Papel en mi portafolio
 
-## 📚 Role in My Portfolio
+Este repositorio es principalmente un **archivo educativo y personal**, no un proyecto principal de producción.
 
-This repository is primarily a **learning and development archive**, not a flagship production project.
+Complementa mis proyectos especializados en:
 
-It complements my more specialized portfolio projects in:
+- Flutter y desarrollo móvil.
+- Desarrollo integral.
+- Backend con Python y .NET.
+- SQL y PostgreSQL.
+- Inteligencia artificial y búsqueda semántica.
+- Arquitectura de software.
 
-- Flutter and mobile development
-- Full-Stack development
-- Backend development with Python and .NET
-- SQL and PostgreSQL
-- AI and semantic search
-- Software architecture
+Su objetivo es mostrar la evolución de mis conocimientos de Python y la base de programación que posteriormente apliqué en proyectos de backend y datos.
 
-The repository is useful for showing the progression of my Python skills and the foundation behind my later backend and AI/data projects.
+## 📌 Estado del proyecto
 
-## 📌 Project Status
+**Archivo educativo y de proyectos personales.**
 
-**Educational and personal project archive.**
+Contiene trabajos realizados durante diferentes etapas de mi aprendizaje y se mantiene como registro de práctica de desarrollo con Python.
 
-The repository contains work created during different stages of my programming journey and is maintained as a record of practical Python development.
+Para ejemplos orientados a portafolio, consulta los proyectos principales destacados en mi perfil de GitHub.
 
-For production-oriented examples, see the larger projects featured in my GitHub profile.
-
-## 👨‍💻 Author
+## 👨‍💻 Autor
 
 **Miguel Arbeláez Vallejo**
 
-Software Developer | Flutter & Dart | Full-Stack | Backend | AI/Data
+Desarrollador de Software | Flutter y Dart | Desarrollo integral | Backend | IA y Datos
 
 - GitHub: https://github.com/MiguelArbelaez0
 - LinkedIn: https://www.linkedin.com/in/miguel-arbelaez-v-57719542b/
