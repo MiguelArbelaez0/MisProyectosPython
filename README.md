@@ -44,12 +44,12 @@ Complementa mis proyectos especializados en:
 
 - Flutter y desarrollo móvil.
 - Desarrollo integral.
-- Backend con Python y .NET.
+- Servidor con Python y .NET.
 - SQL y PostgreSQL.
 - Inteligencia artificial y búsqueda semántica.
 - Arquitectura de software.
 
-Su objetivo es mostrar la evolución de mis conocimientos de Python y la base de programación que posteriormente apliqué en proyectos de backend y datos.
+Su objetivo es mostrar la evolución de mis conocimientos de Python y la base de programación que posteriormente apliqué en proyectos de servidor y datos.
 
 ## 📌 Estado del proyecto
 
@@ -63,7 +63,7 @@ Para ejemplos orientados a portafolio, consulta los proyectos principales destac
 
 **Miguel Arbeláez Vallejo**
 
-Desarrollador de Software | Flutter y Dart | Desarrollo integral | Backend | IA y Datos
+Desarrollador de Software | Flutter y Dart | Desarrollo integral | Servidor | IA y Datos
 
 - GitHub: https://github.com/MiguelArbelaez0
 - LinkedIn: https://www.linkedin.com/in/miguel-arbelaez-v-57719542b/
