@@ -67,3 +67,11 @@ Flutter & Dart · Full-Stack · Backend · AI/Data
 
 - GitHub: https://github.com/MiguelArbelaez0
 - LinkedIn: https://www.linkedin.com/in/miguel-arbelaez-v-57719542b/
+
+---
+
+## 🔎 Alcance y verificación documental (2026-11-02)
+
+Este repositorio es un archivo educativo por semanas, no una aplicación única de producción. Incluye ejercicios Python, un archivo XLSX y una base SQLite de práctica. No debe presentarse como una plataforma desplegada ni como prueba de experiencia de producción.
+
+**Estado de la revisión:** contraste estático entre documentación, estructura y archivos de configuración/código seleccionados. No se ejecutaron compilaciones, pruebas automatizadas, despliegues ni auditorías dinámicas de seguridad. La documentación describe el alcance observado, sin certificar preparación para producción.
