@@ -1,5 +1,12 @@
 # Proyectos de Python y archivo de aprendizaje
 
+> **Resumen para evaluación técnica**  
+> **Stack:** Python · ejercicios · SQLite  
+> **Evidencia:** Documenta el aprendizaje de Python mediante ejercicios por semanas; no es una aplicación de producción.  
+> **Código relevante:** Para evaluar: carpetas `Semana1/`, `Semana2/`, `Semana3/`, `Semana4/` y `semana7/`.  
+> **Verificación:** revisión estática de repositorio; no equivale a ejecución de tests ni certificación de producción.
+
+
 Colección de ejercicios y proyectos desarrollados con Python durante mi proceso de aprendizaje en desarrollo de software.
 
 Este repositorio agrupa trabajos prácticos por etapas de desarrollo y conserva un registro cronológico de práctica y experimentación con Python.
