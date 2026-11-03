@@ -3,8 +3,8 @@
 > **Resumen para evaluación técnica**  
 > **Stack:** Python · ejercicios · SQLite  
 > **Evidencia:** Documenta el aprendizaje de Python mediante ejercicios por semanas; no es una aplicación de producción.  
-> **Código relevante:** Para evaluar: carpetas `Semana1/`, `Semana2/`, `Semana3/`, `Semana4/` y `semana7/`.  
-> **Verificación:** revisión estática de repositorio; no equivale a ejecución de tests ni certificación de producción.
+> **Código para revisar:** carpetas `Semana1/`, `Semana2/`, `Semana3/`, `Semana4/` y `semana7/`.  
+> **Estado:** revisión documental; pruebas y despliegue no verificados.
 
 
 Colección de ejercicios y proyectos desarrollados con Python durante mi proceso de aprendizaje en desarrollo de software.
@@ -77,8 +77,8 @@ Flutter & Dart · Full-Stack · Backend · AI/Data
 
 ---
 
-## 🔎 Alcance y verificación documental (2026-11-02)
+## Estado técnico y limitaciones
 
 Este repositorio es un archivo educativo por semanas, no una aplicación única de producción. Incluye ejercicios Python, un archivo XLSX y una base SQLite de práctica. No debe presentarse como una plataforma desplegada ni como prueba de experiencia de producción.
 
-**Estado de la revisión:** contraste estático entre documentación, estructura y archivos de configuración/código seleccionados. No se ejecutaron compilaciones, pruebas automatizadas, despliegues ni auditorías dinámicas de seguridad. La documentación describe el alcance observado, sin certificar preparación para producción.
+**Verificación:** análisis estático del repositorio. No se han comprobado aquí compilación, pruebas automatizadas, despliegue ni seguridad dinámica.
