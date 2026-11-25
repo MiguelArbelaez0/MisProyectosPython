@@ -1,5 +1,9 @@
 # Proyectos de Python y archivo de aprendizaje
 
+> **Estado:** Completado · archivo educativo  
+> **Versión:** `1.0.0 (VERSION)`  
+> **Tecnologías:** Python · SQLite · ejercicios por etapas
+
 > **En resumen**  
 > **Stack:** Python · ejercicios · SQLite  
 > **Evidencia:** Documenta el aprendizaje de Python mediante ejercicios por semanas; no es una aplicación de producción.  
